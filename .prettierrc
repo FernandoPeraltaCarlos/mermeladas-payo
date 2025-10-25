@@ -1,0 +1,26 @@
+{
+	"useTabs": true,
+	"tabWidth": 2,
+	"singleQuote": true,
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"singleQuote": false
+			}
+		},
+		{
+			"files": ["*.css", "*.scss", "*.astro"],
+			"options": {
+				"singleQuote": true
+			}
+		},
+		{
+			"files": "*.astro",
+			"options": {
+				"parser": "astro"
+			}
+		}
+	],
+	"plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+}
