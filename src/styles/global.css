@@ -1,1 +1,45 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/*Estilos para layouts*/
+
+@utility base {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@utility limit {
+    max-width:1200px;
+    width: 100%;
+    padding:1rem;
+}
+
+/* Custom media breakpoints */
+
+@custom-variant 2xl (@media (max-width: 1535px));
+@custom-variant xl  (@media (max-width: 1279px));
+@custom-variant lg  (@media (max-width: 1023px));
+@custom-variant md  (@media (max-width: 767px));
+@custom-variant sm  (@media (max-width: 639px));
+@custom-variant na  (@media (max-width: 453px));
+
+/* View Timeline Animation */
+
+@keyframes fade-in-view {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@utility fade-in-viewport {
+    animation: fade-in-view linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
