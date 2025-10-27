@@ -1,0 +1,15 @@
+---
+import { twMerge } from 'tailwind-merge';
+---
+
+<footer class={twMerge(`limit center prose bg-primario w-full p-10`)}>
+	<p class={twMerge(`text-black`)}>
+		©<span id='date-year'>#</span> Reposteria Payo, Todos los derechos reservados
+	</p>
+</footer>
+<script is:inline>
+	const yearElement = document.getElementById('date-year');
+	if (yearElement) {
+		yearElement.innerText = new Date().getFullYear().toString();
+	}
+</script>

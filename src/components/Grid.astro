@@ -1,22 +1,40 @@
----
-import style from '../styles/grid.module.scss';
----
-
 <section
-	class=`${style.grid} limit gap-6 lg:gap-4 md:gap-2 [&_img]:rounded-xl [&_img]:shadow`>
-	<div class='gap-6 md:gap-2 lg:gap-4'>
+	class='limit fade-in-viewport grid gap-4 md:gap-1 lg:gap-2 [&_img]:rounded-xl [&_img]:shadow'>
+	<div class='gap-4 md:gap-1 lg:gap-2'>
 		<img src='/bote-01.png' alt='Bote' />
 		<img src='/producto-01.png' alt='' />
 		<img src='/rellenos-01.png' alt='' />
 	</div>
-	<div class='gap-6 pt-10 md:gap-2 lg:gap-4'>
+	<div class='gap-4 pt-10 md:gap-1 lg:gap-2'>
 		<img src='/bote-02.png' alt='Bote' />
 		<img src='/producto-02.png' alt='' />
 		<img src='/rellenos-02.png' alt='' />
 	</div>
-	<div class='gap-6 md:gap-2 lg:gap-4'>
+	<div class='gap-4 md:gap-1 lg:gap-2'>
 		<img src='/bote-03.png' alt='Bote' />
 		<img src='/producto-03.png' alt='' />
 		<img src='/rellenos-03.png' alt='' />
 	</div>
 </section>
+<style lang='scss'>
+	.grid {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		width: 100%;
+
+		& > div {
+			width: 100%;
+			flex-basis: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+
+			& > img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+</style>
