@@ -1,5 +1,5 @@
 <section
-	class='limit fade-in-viewport grid gap-4 md:gap-1 lg:gap-2 [&_img]:rounded-xl [&_img]:shadow'>
+	class='limit min-md:fade-in-viewport grid gap-4 md:gap-1 lg:gap-2 [&_img]:rounded-xl [&_img]:shadow'>
 	<div class='gap-4 md:gap-1 lg:gap-2'>
 		<img data-image='zoom' src='/bote-01.png' alt='Bote' />
 		<img data-image='zoom' src='/producto-01.png' alt='' />
@@ -18,18 +18,18 @@
 </section>
 <style lang='scss'>
 	.grid {
-		display: flex;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-rows: auto;
+		justify-items: center;
 		align-items: start;
-		width: 100%;
-
 		& > div {
 			width: 100%;
-			flex-basis: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
 			align-items: center;
+			max-width: 100%;
 
 			& > img {
 				width: 100%;

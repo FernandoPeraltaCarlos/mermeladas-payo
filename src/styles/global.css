@@ -1,61 +1,68 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 /* Colors */
 
 @theme {
-    --color-primario: #759C62;
-    --color-primario-oscuro: #68884E;
+    --color-primario: #759c62;
+    --color-primario-oscuro: #68884e;
 }
 
 /*Estilos para layouts*/
 
 @utility base {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @utility limit {
-    max-width:1200px;
+    max-width: 1200px;
     width: 100%;
-    padding:1rem;
+    padding: 1rem;
 }
 
 @utility center {
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Componentes */
 @utility btn-primario {
-    text-decoration:none;
+    text-decoration: none;
     @apply px-3 py-2;
     @apply bg-primario;
     @apply rounded-sm;
     @apply border-primario border-solid border-2;
 
-    @variant hover{
+    @variant hover {
         @apply bg-primario-oscuro;
         @apply border-primario-oscuro border-solid border-2;
     }
 }
 
 @utility btn-secundario {
-    text-decoration:none;
+    text-decoration: none;
     @apply px-3 py-2;
     @apply bg-white;
     @apply rounded-sm;
     @apply border-black border-solid border-2;
 
-    @variant hover{
+    @variant hover {
         @apply bg-gray-50;
         @apply border-black border-solid border-2;
     }
 }
 
+.text-principal {
+    @apply sm:prose-lg;
+}
+
+.text-secondary{
+    @apply sm:prose-sm;
+}
 /* Custom media breakpoints */
 
 @custom-variant 2xl (@media (max-width: 1535px));
@@ -71,7 +78,7 @@
     from {
         opacity: 0;
         transform: translateY(20px);
-        transform: scale(80%);
+        transform: scale(90%);
     }
     to {
         opacity: 1;
