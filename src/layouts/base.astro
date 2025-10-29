@@ -5,21 +5,101 @@ import '../styles/global.css';
 <!doctype html>
 <html lang='es'>
 	<head>
+		<link rel='sitemap' href='/sitemap-index.xml' />
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+		<!-- SEO Meta Tags -->
+		<title>
+			Mermeladas y Cajetas Payo - Materia Prima para Repostería | México
+		</title>
+		<meta
+			name='description'
+			content='Proveedor de mermeladas, cajetas y rellenos para panaderías y repostería. Amplia variedad de sabores con fruta de alta calidad. Presentaciones de 500g a 24kg.'
+		/>
+		<meta
+			name='keywords'
+			content='mermeladas para repostería, cajetas, rellenos para panadería, materia prima repostería, proveedores panaderías México'
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta property='og:type' content='website' />
+		<meta
+			property='og:title'
+			content='Mermeladas y Cajetas Payo - Materia Prima para Repostería'
+		/>
+		<meta
+			property='og:description'
+			content='Proveedor de mermeladas, cajetas y rellenos para panaderías y repostería profesional.'
+		/>
+		<meta property='og:image' content='/mermelada-manzana-banner.png' />
+		<meta property='og:url' content='https://reposteria-payo.vercel.app/' />
+		<meta property='og:locale' content='es_MX' />
+
+		<!-- Twitter -->
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:title' content='Mermeladas y Cajetas Payo' />
+		<meta
+			name='twitter:description'
+			content='Proveedor de mermeladas y cajetas para repostería profesional.'
+		/>
+		<meta name='twitter:image' content='/mermelada-manzana-banner.png' />
+
+		<!-- Canonical -->
+		<link rel='canonical' href='https://reposteria-payo.vercel.app/' />
+
+		<!-- Favicon -->
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='icon' type='image/png' href='/favicon.png' />
+		<link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+		<link rel='manifest' href='/site.webmanifest' />
+
+		<!-- Fonts -->
 		<link rel='preconnect' href='https://fonts.googleapis.com' />
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 		<link
 			href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
 			rel='stylesheet'
 		/>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<title>Payo</title>
+
 		<style lang='scss'>
 			* {
 				font-family: 'Montserrat', sans-serif;
 				scroll-behavior: smooth;
 			}
 		</style>
+
+		<!-- Schema.org JSON-LD -->
+		<script type='application/ld+json' is:inline>
+			{
+				"@context": "https://schema.org",
+				"@type": "FoodEstablishment",
+				"name": "Mermeladas Payo",
+				"description": "Proveedor de mermeladas, cajetas y rellenos para panaderías y repostería",
+				"image": "https://mermeladaspayo.com/mermelada-manzana-banner.png",
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "MX",
+					"addressLocality": "Ciudad de México"
+				},
+				"telephone": "+52-55-2699-6556",
+				"url": "https://reposteria-payo.vercel.app/",
+				"priceRange": "$$",
+				"servesCuisine": "Repostería, Panadería",
+				"potentialAction": {
+					"@type": "OrderAction",
+					"target": {
+						"@type": "EntryPoint",
+						"urlTemplate": "https://wa.me/525526996556?text=Hola,%20me%20interesa%20uno%20de%20tus%20productos",
+						"inLanguage": "es-MX",
+						"actionPlatform": [
+							"http://schema.org/DesktopWebPlatform",
+							"http://schema.org/MobileWebPlatform"
+						]
+					}
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<slot />

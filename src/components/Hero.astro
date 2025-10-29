@@ -1,8 +1,12 @@
+---
+import WhatsAppIcon from './WhatsAppIcon.astro';
+---
+
 <header
 	class='limit prose fade-in-viewport flex items-center justify-center *:basis-full lg:flex-col'>
 	<div class='flex flex-col items-start justify-center lg:items-center'>
 		<h1 class='text-principal text-6xl lg:text-center'>
-			Materia Prima para Repostería y Panaderías
+			Mermeladas y cajetas para repostería y panaderías
 		</h1>
 		<p class='prose-stone text-secondary lg:text-center'>
 			<b>Somos los aliados perfectos para los expertos en la cocina</b>, así
@@ -10,12 +14,19 @@
 			y calidad a sus platillos para conquistar el gusto de sus consumidores.
 		</p>
 		<div class='flex items-center justify-start gap-4 lg:justify-center'>
-			<a href='#' class='btn-primario text-secondary'>Contactanos</a>
+			<a
+				href='https://wa.me/525526996556?text=Hola,%20me%20interesa%20uno%20de%20tus%20productos'
+				target='_blank'
+				rel='noopener noreferrer'
+				class='btn-primario text-secondary flex items-center gap-2'>
+				<WhatsAppIcon class='h-5 w-5' />
+				Contactanos
+			</a>
 			<a href='#products' class='btn-secundario text-secondary'>Ver productos</a
 			>
 		</div>
 	</div>
 	<figure class='flex items-center justify-center'>
-		<img class='h-auto w-full' src='/cajeta.png' alt='cajeta' />
+		<img class='h-auto w-full' src='/cajeta.png' alt='Cajeta Payo de calidad premium para banquetes y repostería' loading='lazy' />
 	</figure>
 </header>

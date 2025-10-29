@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mermeladaspayo.com/sitemap.xml
+
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.astro/

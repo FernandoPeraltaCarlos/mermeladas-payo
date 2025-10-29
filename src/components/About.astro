@@ -1,3 +1,7 @@
+---
+import WhatsAppIcon from './WhatsAppIcon.astro';
+---
+
 <section
 	class='fade-in-viewport limit prose sm:center flex items-center justify-center gap-8 sm:flex-col'>
 	<div class='sm:center w-full basis-[70%] sm:basis-full sm:flex-col'>
@@ -11,13 +15,21 @@
 			> que van desde mangas de 500 g a 1 kg o cubetas de 5 hasta 24 kg, hemos
 			mantenido la preferencia de nuestros clientes.
 		</p>
-		<a href='#' class='btn-primario text-secondary'>Contactanos</a>
+		<a
+			href='https://wa.me/525526996556?text=Hola,%20me%20interesa%20uno%20de%20tus%20productos'
+			target='_blank'
+			rel='noopener noreferrer'
+			class='btn-primario text-secondary flex w-fit items-center gap-2'>
+			<WhatsAppIcon class='h-5 w-5' />
+			Contactanos
+		</a>
 	</div>
 	<figure class='sm:center w-full basis-[30%] sm:basis-full'>
 		<img
 			class='h-auto w-full sm:max-w-[200px]'
 			src='/zarzamora.png'
-			alt='mermelada de zarzamora'
+			alt='Mermelada de zarzamora natural Payo para repostería profesional'
+			loading='lazy'
 		/>
 	</figure>
 </section>
